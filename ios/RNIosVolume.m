@@ -14,7 +14,7 @@ RCT_EXPORT_MODULE();
     _volumeView = [[MPVolumeView alloc] init];
   
   
-    NSLog(@"test===%d===",[_volumeView.subviews count]);
+//    NSLog(@"test===%d===",[_volumeView.subviews count]);
     
     UISlider* slider = nil;
     for(UIView *subview in _volumeView.subviews){
