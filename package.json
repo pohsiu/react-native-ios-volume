@@ -12,8 +12,8 @@
     "volume-control",
     "ios"
   ],
-  "author": "",
-  "license": "",
+  "author": "louis hsiao",
+  "license": "MIT",
   "devDependencies": {
     "react": ">=16.0.0-alpha.12"
   },
