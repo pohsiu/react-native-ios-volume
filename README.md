@@ -1,4 +1,9 @@
 
+
+<h1 align="center">React Native ios Volume</h1>
+<p align="center">A library that controls 'ios device' volume.</p>
+<p align="center">Physical Device 'Only'</p>
+
 # react-native-ios-volume
 
 ## Getting started
@@ -24,9 +29,52 @@
 
 ## Usage
 ```javascript
-import RNIosVolume from 'react-native-ios-volume';
 
-// TODO: What to do with the module?
-RNIosVolume;
+import RNIosVolume from 'react-native-ios-volume';
+import React, {Component} from 'react';
+
+class VolumeTest extends Component {
+  constructor(props) {
+    super(props);
+    RNIosVolume.onVolumeChange = e=>{
+      console.log(`onChange===${e.volume}===`);
+    };
+  }
+  componentDidMount(){
+    console.log("testing start");
+    RNIosVolume.getVolume().then(e=>{
+      console.log(`onGet===${e}===`);
+    });
+    RNIosVolume.setVolume(1);
+    RNIosVolume.setVolume(0.2);
+    RNIosVolume.setVolume(0.5);
+  }
+  
+  ...
+}
 ```
+
+
+<h2 align="center">API</h2>
+<p align="center">Static access to the RNIosVolume API.</p>
+
+Method Name                 | Description                                                                         | Platform
+--------------------------- | ----------------------------------------------------------------------------------- | --------
+RNIosVolume.getVolume()     | Get a promise that return volume .2f float value          						  |  iOS
+RNIosVolume.setVolume()		| Set a number to your device on volume  											  |  iOS
+
+
+<h2 align="center">Events</h2>
+<p align="center">Callbacks that are invoked when a native event emitted.</p>
+Event Name                          | Description                                            | Event                                           | Platform
+----------------------------------- | ------------------------------------------------------ | ----------------------------------------------- | --------
+RNIosVolume.onChangeVolume(event)   | Invoked when ios system volume is changed       		 | `event.volume`  		                           |  iOS
+
+<h2 align="center">Contibutors</h2>
+
+* @pohsiu
+* @zxcal
+
+
+
   
