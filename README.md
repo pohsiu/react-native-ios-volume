@@ -70,8 +70,7 @@ RNIosVolume.setVolume()		| Set a number to your device on volume  											  |
 Event Name                          | Description                                            | Event                                           | Platform
 ----------------------------------- | ------------------------------------------------------ | ----------------------------------------------- | --------
 RNIosVolume.onChangeVolume(event)   | Invoked when ios system volume is changed       		 | `event.volume`  		                           |  iOS
-RNIosVolume.onChangeVolume(event)   | Invoked when ios system volume is changed            | `event.volume`                                |  iOS
-RNIosVolume.onChangeVolume(event)   | Invoked when ios system volume is changed            | `event.volume`                                |  iOS
+
 
 <h2 align="center">Contibutors</h2>
 
