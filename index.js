@@ -6,7 +6,7 @@ const { RNIosVolume } = NativeModules;
 class RNVolume{
   
     constructor(){
-        this.RNIosVolumeEmitter = new NativeEventEmitter(NativeModules.RNIosVolume);
+        const RNIosVolumeEmitter = new NativeEventEmitter(NativeModules.RNIosVolume);
         RNIosVolumeEmitter.addListener("volumeChanged",this._onVolumeChange.bind(this));
     }
     getVolume(){
