@@ -14,7 +14,7 @@ RCT_EXPORT_MODULE();
     _volumeView = [[MPVolumeView alloc] init];
   
   
-//    NSLog(@"test===%d===",[_volumeView.subviews count]);
+
     
     UISlider* slider = nil;
     for(UIView *subview in _volumeView.subviews){
@@ -27,7 +27,7 @@ RCT_EXPORT_MODULE();
       }
     }
   
-  //  [slider setValue:1];
+
   }
   
   return self;
@@ -55,15 +55,10 @@ RCT_EXPORT_METHOD(setVolume:(float) value)
 
 - (void)sliderValueChanged:(UISlider *)sender {
   NSNumber *value = [NSNumber numberWithFloat:sender.value];
-//  NSLog(@"%.2f",sender.value);
+
   [self sendEventWithName:@"volumeChanged" body:@{@"volume": value}];
 }
-//
-//- (void)setVolume:(float) value
-//{
-//  [_slider setValue:value];
-//  NSLog(@"%.2f",_slider.value);
-//}
+
 - (dispatch_queue_t)methodQueue
 {
   return dispatch_get_main_queue();
